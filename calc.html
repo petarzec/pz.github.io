@@ -18,8 +18,9 @@
 <p><label for="range_weight">COGS Margin: </label> <input type="range" name="weight" id="n4" class="slider" min="0" max="100" value="25">
 <span  class="slider_label"></span>%</p>
 
-
+<br>
 <p><button onclick="calc();">Calculate Totals</button></p>
+<br>
 
 <p>Net Profit: <input type="text" id="result1" /></p>
 <p>Net Margin: <input type="text" id="result2" />%</p>
@@ -42,14 +43,11 @@ $('.slider').on('input change', function(){
   
   
 })
-
 function calc() {
   var n1 = parseFloat(document.getElementById('n1').value);
   var n2 = parseFloat(document.getElementById('n2').value);
   var n3 = parseFloat(document.getElementById('n3').value);
   var n4 = parseFloat(document.getElementById('n4').value);
-
-
   var n4a = n4 / 100;
 	var r3 = document.getElementById('result3').value = n1 / n3;
   var r5 = document.getElementById('result5').value = (r3 * n4a)
@@ -58,5 +56,4 @@ function calc() {
   var r4 = document.getElementById('result4').value = r1 / n3;
   var r6 = document.getElementById('result6').value = n2 / n3;
 }
-
 	</script>
