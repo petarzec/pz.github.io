@@ -1,35 +1,18 @@
-<head>
-<script src="jquery-3.4.1.min.js">
+<!DOCTYPE html>
+<html lang="en">
 	
-	$(function slider()
-{
-$('.slider').on('input change', function(){
-          $(this).next($('.slider_label')).html(this.value);
-        });
-      $('.slider_label').each(function(){
-          var value = $(this).prev().attr('value');
-          $(this).html(value);
-        });  
-  
-  
-})
-function calc() {
-  var n1 = parseFloat(document.getElementById('n1').value);
-  var n2 = parseFloat(document.getElementById('n2').value);
-  var n3 = parseFloat(document.getElementById('n3').value);
-  var n4 = parseFloat(document.getElementById('n4').value);
-  var n4a = n4 / 100;
-	var r3 = document.getElementById('result3').value = n1 / n3;
-  var r5 = document.getElementById('result5').value = (r3 * n4a)
-  var r1 = document.getElementById('result1').value = n1 - ((n2) + (n3 * r5));
-  var r2 = document.getElementById('result2').value = (r1 / n1) * 100;
-  var r4 = document.getElementById('result4').value = r1 / n3;
-  var r6 = document.getElementById('result6').value = n2 / n3;
-}
-</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+<head>
 </head>
+	
+  
 
-<p>Revenue: <input type="text" id="n1" /></p>
+	<p>Revenue: <input type="text" id="n1" /></p>
 <p>Ad Spend: <input type="text" id="n2" /></p>
 <p>Number of Orders: <input type="text" id="n3" /></p>
 <p><label for="range_weight">COGS Margin: </label> <input type="range" name="weight" id="n4" class="slider" min="0" max="100" value="25">
@@ -46,3 +29,35 @@ function calc() {
 <p>Average Order Cost: <input type="text" id="result5" /></p>
 <p>Ad Spend per Order: <input type="text" id="result6" /></p>
 
+<script>
+	
+$(function slider()
+{
+$('.slider').on('input change', function(){
+          $(this).next($('.slider_label')).html(this.value);
+        });
+      $('.slider_label').each(function(){
+          var value = $(this).prev().attr('value');
+          $(this).html(value);
+        });  
+  
+  
+})
+
+function calc() {
+  var n1 = parseFloat(document.getElementById('n1').value);
+  var n2 = parseFloat(document.getElementById('n2').value);
+  var n3 = parseFloat(document.getElementById('n3').value);
+  var n4 = parseFloat(document.getElementById('n4').value);
+
+
+  var n4a = n4 / 100;
+	var r3 = document.getElementById('result3').value = n1 / n3;
+  var r5 = document.getElementById('result5').value = (r3 * n4a)
+  var r1 = document.getElementById('result1').value = n1 - ((n2) + (n3 * r5));
+  var r2 = document.getElementById('result2').value = (r1 / n1) * 100;
+  var r4 = document.getElementById('result4').value = r1 / n3;
+  var r6 = document.getElementById('result6').value = n2 / n3;
+}
+
+	</script>
