@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-	
 <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<p>Revenue: <input type="text" /></p>
+<p>Ad Spend: <input type="text" /></p>
+<p>Number of Orders: <input type="text" /></p>
+<p><label for="range_weight">COGS Margin: </label> <input max="100" min="0" name="weight" type="range" value="25" /> %</p>
+<p><button>Calculate</button></p>
+<p>Net Profit: <input type="text" /></p>
+<p>Net Margin: <input type="text" />%</p>
+<p>Ad Spend per Order: <input type="text" /></p>
+<p>Average Order Value: <input type="text" /></p>
+<p>Average Order Profit: <input type="text" /></p>
+<p>Average Order Cost: <input type="text" /></p>
+
 	
-<head>
-</head>
 	
-  
-
-<p>Revenue: <input type="text" id="n1" /></p>
-<p>Ad Spend: <input type="text" id="n2" /></p>
-<p>Number of Orders: <input type="text" id="n3" /></p>
-<p><label for="range_weight">COGS Margin: </label> <input type="range" name="weight" id="n4" class="slider" min="0" max="100" value="25">
-<span  class="slider_label"></span>%</p>
-
-<br>
-<p><button onclick="calc();">Calculate Totals</button></p>
-<br>
-
-<p>Net Profit: <input type="text" id="result1" /></p>
-<p>Net Margin: <input type="text" id="result2" />%</p>
-<p>Average Order Value: <input type="text" id="result3" /></p>
-<p>Average Order Profit: <input type="text" id="result4" /></p>
-<p>Average Order Cost: <input type="text" id="result5" /></p>
-<p>Ad Spend per Order: <input type="text" id="result6" /></p>
-
 <script>
 	
 $(function slider()
