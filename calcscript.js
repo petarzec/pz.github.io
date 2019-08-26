@@ -1,4 +1,3 @@
-
 $(function slider()
 {
 $('.slider').on('input change', function(){
